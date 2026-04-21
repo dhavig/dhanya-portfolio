@@ -1,96 +1,82 @@
 import { Reveal } from '@/components/Reveal';
 
-type Item = {
-  icon: string;
-  name: string;
-  sub: string;
-  badge: string;
-  badgeClass: string;
-};
-
-const items: Item[] = [
+const items = [
   {
-    icon: '🏛️',
+    emoji: '🏛️',
     name: 'SCLA Honor Society',
-    sub: 'Society for Collegiate Leadership & Achievement · Nominated by faculty at Loyola University Chicago · Nationally accredited · Extended to a small percentage of students · 2026',
+    sub: 'Nominated by faculty at Loyola University Chicago. Nationally accredited · 2026',
     badge: 'NOMINATED',
-    badgeClass: 'bg-brand/10 text-brand',
+    tone: 'bg-purple-100 text-purple-700',
   },
   {
-    icon: '🏅',
+    emoji: '🏅',
     name: 'ISTQB Foundation Level',
-    sub: 'International Software Testing Qualifications Board · Score: 83% (threshold: 65%) · Registered on AT*SQA Successful Candidate Register · 2024',
+    sub: 'International Software Testing Qualifications Board · Score: 83% · 2024',
     badge: 'CERTIFIED',
-    badgeClass: 'bg-emerald-100 text-emerald-700',
+    tone: 'bg-green-100 text-green-700',
   },
   {
-    icon: '🎓',
+    emoji: '🎓',
     name: 'MS Computer Science',
-    sub: 'Loyola University Chicago · GPA 3.67 / 4.0 · Cum Laude (With Honors) · Graduate Reference Assistant at Lakeshore Campus · May 2026',
+    sub: 'Loyola University Chicago · GPA 3.67 · Cum Laude · May 2026',
     badge: 'IN PROGRESS',
-    badgeClass: 'bg-amber-100 text-amber-700',
+    tone: 'bg-amber-100 text-amber-700',
   },
   {
-    icon: '☁️',
+    emoji: '☁️',
     name: 'AWS Developer Associate',
-    sub: 'Amazon Web Services · Developer Associate Certification · In active preparation · Expected 2026',
+    sub: 'Amazon Web Services · In active preparation · Expected 2026',
     badge: 'UPCOMING',
-    badgeClass: 'bg-ink/5 text-muted',
+    tone: 'bg-stone-100 text-stone-600',
   },
   {
-    icon: '⭐',
+    emoji: '⭐',
     name: 'Exceptional Mover Award',
-    sub: 'Humana / Cognizant · Awarded for outstanding framework delivery, measurable QA impact, and cross-team collaboration · 2022',
+    sub: 'Humana / Cognizant · Outstanding framework delivery and QA impact · 2022',
     badge: 'AWARDED',
-    badgeClass: 'bg-emerald-100 text-emerald-700',
+    tone: 'bg-green-100 text-green-700',
   },
   {
-    icon: '🌟',
+    emoji: '🌟',
     name: 'Upcoming Star Award',
-    sub: 'Humana / Cognizant · Recognized for exceptional professional growth, initiative, and leadership potential within the QA team · 2022',
+    sub: 'Humana / Cognizant · Exceptional professional growth and leadership · 2022',
     badge: 'AWARDED',
-    badgeClass: 'bg-emerald-100 text-emerald-700',
+    tone: 'bg-green-100 text-green-700',
   },
   {
-    icon: '🎓',
+    emoji: '🎓',
     name: 'BE Computer Science',
-    sub: 'Anna University · Tamil Nadu, India · Bachelor of Engineering in Computer Science & Engineering · 2019',
+    sub: 'Anna University · Tamil Nadu, India · 2019',
     badge: 'COMPLETED',
-    badgeClass: 'bg-ink/5 text-muted',
+    tone: 'bg-stone-100 text-stone-600',
   },
 ];
 
 export function Achievements() {
   return (
-    <section id="achievements" className="bg-light px-8 py-32">
-      <div className="section-inner">
-        <Reveal as="p" className="section-eyebrow">
-          Recognition
-        </Reveal>
-        <Reveal as="h2" className="section-title" delay={0.05}>
-          Certified. Awarded. Trusted.
-        </Reveal>
-        <Reveal as="p" className="section-body" delay={0.1}>
-          Industry certifications, academic excellence, and recognition from global healthcare
-          and fintech companies — a track record of consistent delivery and growth.
+    <section id="achievements" className="py-32 relative">
+      <div className="max-w-6xl mx-auto px-6 sm:px-12">
+        <Reveal>
+          <div className="text-center mb-16">
+            <span className="font-medium text-sm uppercase tracking-wider text-red-600">Recognition</span>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif mt-4 mb-4 text-stone-900">
+              Certified. Awarded. Trusted.
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto text-stone-600">
+              Industry certifications, academic honors, and recognition from global healthcare and
+              fintech companies.
+            </p>
+          </div>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((it, i) => (
-            <Reveal
-              key={it.name}
-              className="rounded-[22px] border border-white/75 bg-white/60 p-7 backdrop-blur-xl backdrop-saturate-[200%] shadow-glass transition-all hover:-translate-y-1 hover:bg-white/80"
-              delay={i * 0.04}
-            >
-              <span className="mb-4 block text-[2rem]">{it.icon}</span>
-              <div className="mb-1 text-[0.95rem] font-semibold tracking-[-0.01em] text-ink">
-                {it.name}
-              </div>
-              <div className="text-[0.82rem] leading-relaxed text-muted">{it.sub}</div>
-              <div className="mt-4">
-                <span
-                  className={`inline-block rounded-full px-3 py-1 text-[0.68rem] font-semibold tracking-wider ${it.badgeClass}`}
-                >
+            <Reveal key={it.name} delay={i * 0.05}>
+              <div className="group p-6 rounded-3xl transition-all duration-500 transform hover:-translate-y-1 border bg-white/80 border-stone-200 shadow-sm hover:border-red-300 hover:shadow-lg hover:shadow-red-500/5">
+                <div className="text-4xl mb-4">{it.emoji}</div>
+                <div className="mb-1 text-lg font-medium font-serif text-stone-900">{it.name}</div>
+                <p className="text-sm leading-relaxed text-stone-600 mb-4">{it.sub}</p>
+                <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${it.tone}`}>
                   {it.badge}
                 </span>
               </div>
