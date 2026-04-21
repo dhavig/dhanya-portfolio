@@ -12,6 +12,16 @@ type Project = {
 
 const projects: Project[] = [
   {
+    name: 'AgentEvalHub',
+    kind: 'Python · Multi-LLM · RAG · Red-team',
+    desc:
+      'Open-source reliability harness for agentic LLM systems. Provider-agnostic adapters (Claude, OpenAI, Gemini, Ollama), YAML-driven tool-use / RAG / red-team suites, deterministic + LLM-as-judge graders, DuckDB run history with SQL drift detection, Streamlit dashboard, and a weekly GitHub Action that auto-opens issues when pinned models regress.',
+    tags: ['Python', 'Pytest', 'DuckDB', 'Streamlit', 'LLM-as-Judge'],
+    href: 'https://github.com/dhavig/agent-eval-hub',
+    gradient: 'from-red-500 to-rose-400',
+    emoji: '🤖',
+  },
+  {
     name: 'SDET Automation Framework',
     kind: 'Playwright · TypeScript · CI/CD',
     desc:
@@ -22,23 +32,13 @@ const projects: Project[] = [
     emoji: '🧪',
   },
   {
-    name: 'Voice Assistant QA Portfolio',
-    kind: 'TypeScript · REST API · BDD · NLP',
-    desc:
-      'Specialized QA framework for AI-powered voice assistants — intent recognition validation, NLP response testing, and automated regression for conversational AI.',
-    tags: ['TypeScript', 'Cucumber', 'REST Assured', 'Gherkin', 'AI Testing'],
-    href: 'https://github.com/dhavig',
-    gradient: 'from-orange-400 to-yellow-400',
-    emoji: '🎙️',
-  },
-  {
     name: 'SauceDemo E2E Suite',
     kind: 'Java · Selenium · TestNG · POM',
     desc:
       'Production-quality end-to-end suite using Page Object Model — full checkout flow, cross-browser execution, data-driven Excel testing, and CI pipeline integration.',
     tags: ['Selenium', 'TestNG', 'POM', 'Maven', 'Cross-browser'],
     href: 'https://github.com/dhavig',
-    gradient: 'from-rose-400 to-pink-400',
+    gradient: 'from-orange-400 to-yellow-400',
     emoji: '🛒',
   },
 ];
