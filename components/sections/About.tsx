@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { Reveal } from '@/components/Reveal';
 
 const drivers = [
-  'Building Playwright & REST Assured frameworks that cut regression time by 40%',
-  'Validating HIPAA-regulated healthcare data and fintech payment integrity',
   'Probing AI agents for drift, prompt injection, and silent model regressions',
-  'Mentoring junior SDETs on BDD, POM, CI/CD, and LLM-as-judge patterns',
+  'Designing LLM-as-judge graders and YAML-driven tool-use / RAG eval suites',
+  'Building Playwright & REST Assured frameworks that cut regression time by 40%',
+  'Mentoring engineers on BDD, CI/CD, and AI reliability patterns',
 ];
 
 const skills = [
@@ -30,7 +30,7 @@ export function About() {
               About
             </span>
             <h2 className="text-5xl sm:text-6xl font-serif mt-4 text-stone-900 dark:text-stone-100">
-              Crafting Quality Through Code
+              Engineering Quality for AI Systems
             </h2>
           </div>
         </Reveal>
@@ -39,10 +39,8 @@ export function About() {
           <div className="lg:col-span-2">
             <Reveal delay={0.1}>
               <p className="text-lg leading-relaxed mb-6 text-stone-600 dark:text-stone-400">
-                Hi, I&apos;m Dhanya — a Senior SDET with 5+ years across fintech and healthcare.
-                I build Playwright, Selenium, and REST Assured frameworks that engineering teams
-                rely on daily — and increasingly, reliability harnesses for agentic LLM systems
-                (see{' '}
+                Hi, I&apos;m Dhanya — an <strong className="text-stone-800 dark:text-stone-200">AI Quality Engineer</strong>{' '}
+                building reliability harnesses for agentic LLM systems. My open-source project{' '}
                 <a
                   href="https://github.com/dhavig/agent-eval-hub"
                   target="_blank"
@@ -50,13 +48,16 @@ export function About() {
                   className="font-medium text-red-700 dark:text-red-400 underline decoration-red-300 dark:decoration-red-700 underline-offset-4 hover:decoration-red-500"
                 >
                   AgentEvalHub
-                </a>
-                ). I care deeply about reliability and the quiet craftsmanship that separates a
-                good test from a great one.
+                </a>{' '}
+                ships provider-agnostic adapters, YAML-driven tool-use / RAG / red-team suites,
+                deterministic + LLM-as-judge graders, and DuckDB-backed drift detection that
+                auto-files issues when pinned models regress.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
               <p className="text-lg leading-relaxed mb-6 text-stone-600 dark:text-stone-400">
+                That AI work sits on top of 5+ years as a Senior SDET across fintech and healthcare —
+                Playwright, Selenium, and REST Assured frameworks engineering teams rely on daily.
                 I&apos;m pursuing MS Computer Science at Loyola University Chicago (GPA 3.67 ·{' '}
                 <strong>Cum Laude</strong>, May 2026) while interning as an SDET at CCC. Previously
                 I led API automation at MetLife via TCS, and HIPAA compliance testing at Humana
@@ -66,8 +67,8 @@ export function About() {
             <Reveal delay={0.2}>
               <p className="text-lg leading-relaxed mb-8 text-stone-600 dark:text-stone-400">
                 ISTQB certified. Work-authorized with no sponsorship required. Available
-                immediately for Senior SDET, SDE II Automation, QE, or QA Lead roles — hybrid,
-                remote, or on-site across the US.
+                immediately for AI Quality Engineer, Senior SDET, SDE II Automation, QE, or QA Lead
+                roles — hybrid, remote, or on-site across the US.
               </p>
             </Reveal>
           </div>

@@ -18,13 +18,14 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: 'Dhanya Sridhar — Senior SDET',
+  title: 'Dhanya Sridhar — AI Quality Engineer & Senior SDET',
   description:
-    'Senior SDET with 5+ years across fintech and healthcare. MS Computer Science, Loyola University Chicago. Playwright, Selenium, REST Assured, CI/CD.',
+    'AI Quality Engineer building reliability harnesses for agentic LLM systems. Creator of AgentEvalHub — LLM-as-judge graders, tool-use / RAG / red-team suites, DuckDB drift detection. 5+ years SDET across fintech and healthcare.',
   authors: [{ name: 'Dhanya Sridhar' }],
   openGraph: {
-    title: 'Dhanya Sridhar — Senior SDET',
-    description: 'Senior SDET. Playwright · Java · CI/CD. Chicago, IL.',
+    title: 'Dhanya Sridhar — AI Quality Engineer & Senior SDET',
+    description:
+      'AI reliability harnesses · LLM-as-judge · AgentEvalHub · Playwright · CI/CD. Chicago, IL.',
     type: 'website',
   },
 };

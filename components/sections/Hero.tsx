@@ -43,19 +43,19 @@ export function Hero() {
           {/* Tagline */}
           <div className="transition-all duration-700 ease-in-out" style={{ transitionDelay: '300ms' }}>
             <p className="text-xl sm:text-2xl mb-8 font-light italic relative text-slate-600">
-              Senior SDET crafting resilient test automation at scale
+              AI Quality Engineer — building reliability harnesses for agentic LLM systems
             </p>
           </div>
 
           {/* Currently at */}
           <div className="transition-all duration-700 ease-in-out" style={{ transitionDelay: '400ms' }}>
             <p className="text-lg mb-12 leading-relaxed text-slate-500">
-              5+ years across fintech and healthcare — building{' '}
+              I build{' '}
               <span className="font-medium relative group cursor-pointer text-red-700">
-                <span className="relative z-10">Playwright, Selenium, and REST Assured</span>
+                <span className="relative z-10">LLM-as-judge graders, tool-use eval suites, and red-team harnesses</span>
                 <span className="absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-300 bg-gradient-to-r from-red-400 to-orange-400" />
               </span>{' '}
-              frameworks engineering teams rely on daily. MS Computer Science · Loyola University Chicago ·{' '}
+              that catch agent drift before production — backed by 5+ years shipping Playwright, Selenium, and REST Assured automation in fintech and healthcare. MS Computer Science · Loyola University Chicago ·{' '}
               <em className="not-italic font-medium text-red-700">Cum Laude</em>, 2026.
             </p>
           </div>
