@@ -1,19 +1,29 @@
-# Dhanya Sridhar — Portfolio                                                  
-                                                                                
-  Personal portfolio website built with HTML/CSS, showcasing my background,     
-  skills, and projects as a QA Engineer / SDET.                                 
-                                                                                
-  ## Live Site                                              
+# Dhanya Sridhar — Portfolio
 
-  [dhavig.github.io/dhanya-portfolio](https://dhavig.github.io/dhanya-portfolio)
-   
-  ## About                                                                      
-                                                            
-  This portfolio covers:                                                        
-  - My background and experience in QA/SDET
-  - Skills in test automation, exploratory testing, and CI/CD                   
-  - Links to my key projects                                                    
-   
-  ## Tech                                                                       
-                                                            
-  Built with plain HTML and CSS — hosted via GitHub Pages
+Personal portfolio website for Dhanya Sridhar, Senior SDET.
+
+## Live Site
+
+[dhavig.github.io/dhanya-portfolio](https://dhavig.github.io/dhanya-portfolio)
+
+## Stack
+
+- **Next.js 15** (App Router) with static export (`output: 'export'`)
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion** (scroll reveals)
+- **next/font** (Inter)
+- Hosted on **GitHub Pages** via GitHub Actions
+
+## Local development
+
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # generates ./out for deploy
+```
+
+## Deploy
+
+Push to `main`; the workflow in `.github/workflows/deploy.yml` builds and publishes
+`./out` to the `github-pages` environment.
