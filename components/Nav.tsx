@@ -82,10 +82,10 @@ export function Nav() {
                 <span>Playground</span>
               </a>
               <a
-                href="/resume.html"
+                href="/Dhanya_Sridhar_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                download="Dhanya_Sridhar_Resume.html"
+                download="Dhanya_Sridhar_Resume.pdf"
                 className="ml-4 px-5 py-2 rounded-full text-sm font-medium text-white transition-all duration-300 bg-red-700 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-500"
               >
                 Resume
@@ -144,10 +144,10 @@ export function Nav() {
               </a>
             ))}
             <a
-              href="/resume.html"
+              href="/Dhanya_Sridhar_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              download="Dhanya_Sridhar_Resume.html"
+              download="Dhanya_Sridhar_Resume.pdf"
               onClick={() => setMobileOpen(false)}
               className="inline-block mt-8 px-6 py-3 rounded-full text-sm font-medium text-white transition-all duration-300 bg-red-700 hover:bg-red-600"
             >
