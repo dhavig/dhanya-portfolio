@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Fraunces } from 'next/font/google';
 import './globals.css';
 import { Nav } from '@/components/Nav';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,13 +29,28 @@ export const metadata: Metadata = {
   },
 };
 
+const themeInitScript = `
+(function() {
+  try {
+    var stored = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var isDark = stored ? stored === 'dark' : prefersDark;
+    document.documentElement.classList.toggle('dark', isDark);
+  } catch (e) {}
+})();
+`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable} light`}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="font-sans">
-        <div className="min-h-screen relative overflow-hidden noise-texture bg-amber-50 text-slate-800">
+        <div className="min-h-screen relative overflow-hidden noise-texture bg-amber-50 dark:bg-stone-950 text-slate-800 dark:text-stone-200 transition-colors duration-500">
           <Nav />
           <main className="relative z-10">{children}</main>
+          <ThemeToggle />
         </div>
       </body>
     </html>
