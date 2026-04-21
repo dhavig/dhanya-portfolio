@@ -1,111 +1,126 @@
 import { Reveal } from '@/components/Reveal';
 
 type Project = {
-  badge: string;
-  stack: string;
-  icon: string;
   name: string;
+  kind: string;
   desc: string;
-  meta: string[];
   tags: string[];
   href: string;
+  gradient: string;
+  emoji: string;
 };
 
 const projects: Project[] = [
   {
-    badge: '⚡ ACTIVE',
-    stack: 'Java · Playwright · TypeScript · CI/CD',
-    icon: '🧪',
     name: 'SDET Automation Framework',
-    desc: 'Enterprise-grade test automation framework targeting OCC and institutional-grade engineering standards. Parallel test execution, GitHub Actions CI/CD, REST API testing, Docker containerization, and AWS S3 test reporting integration.',
-    meta: ['3 Modules Built', 'CI/CD GitHub Actions'],
-    tags: ['Playwright', 'TestNG', 'Docker', 'AWS S3', 'GitHub Actions', 'REST Assured'],
+    kind: 'Playwright · TypeScript · CI/CD',
+    desc:
+      'Enterprise-grade test automation framework. Parallel execution, GitHub Actions CI/CD, REST API testing, Docker containerization, and AWS S3 test reporting integration.',
+    tags: ['Playwright', 'TestNG', 'Docker', 'AWS S3', 'GitHub Actions'],
     href: 'https://github.com/dhavig',
+    gradient: 'from-red-400 to-orange-400',
+    emoji: '🧪',
   },
   {
-    badge: '🎙️ AI / NLP QA',
-    stack: 'TypeScript · REST API · BDD · NLP',
-    icon: '🎙️',
     name: 'Voice Assistant QA Portfolio',
-    desc: 'Specialized QA framework for AI-powered voice assistants — intent recognition validation, NLP response testing, edge case coverage, and automated regression for conversational AI features. Targeted toward Apple Siri-class quality engineering.',
-    meta: ['NLP Intent Testing', 'BDD Gherkin Scenarios'],
+    kind: 'TypeScript · REST API · BDD · NLP',
+    desc:
+      'Specialized QA framework for AI-powered voice assistants — intent recognition validation, NLP response testing, and automated regression for conversational AI.',
     tags: ['TypeScript', 'Cucumber', 'REST Assured', 'Gherkin', 'AI Testing'],
     href: 'https://github.com/dhavig',
+    gradient: 'from-orange-400 to-yellow-400',
+    emoji: '🎙️',
   },
   {
-    badge: '🛒 COMPLETE',
-    stack: 'Java · Selenium · TestNG · POM',
-    icon: '🛒',
     name: 'SauceDemo E2E Suite',
-    desc: 'Production-quality end-to-end automation suite using Page Object Model design pattern — full checkout flow, cross-browser execution, data-driven testing with Excel, BDD scenarios, Maven build lifecycle, and full CI pipeline integration.',
-    meta: ['100% Pass Rate', 'POM Design Pattern'],
-    tags: ['Selenium', 'TestNG', 'POM', 'Maven', 'JUnit', 'Cross-browser'],
+    kind: 'Java · Selenium · TestNG · POM',
+    desc:
+      'Production-quality end-to-end suite using Page Object Model — full checkout flow, cross-browser execution, data-driven Excel testing, and CI pipeline integration.',
+    tags: ['Selenium', 'TestNG', 'POM', 'Maven', 'Cross-browser'],
     href: 'https://github.com/dhavig',
+    gradient: 'from-rose-400 to-pink-400',
+    emoji: '🛒',
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="dark-section bg-[#1d1d1f] px-8 py-32">
-      <div className="section-inner">
-        <Reveal as="p" className="section-eyebrow">
-          Projects
-        </Reveal>
-        <Reveal as="h2" className="section-title" delay={0.05}>
-          Code that ships quality.
-        </Reveal>
-        <Reveal as="p" className="section-body" delay={0.1}>
-          Open-source automation frameworks built to demonstrate real-world SDET engineering
-          patterns — designed to be production-ready, cloneable, and deployable from day one.
+    <section id="projects" className="py-24 md:py-32 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal>
+          <div className="text-center mb-16">
+            <span className="font-medium text-sm uppercase tracking-wider text-red-600">Portfolio</span>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif mt-4 mb-8 text-stone-900">
+              Featured Projects
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto text-stone-600">
+              Open-source automation frameworks built to demonstrate real-world SDET engineering
+              patterns — production-ready, cloneable, deployable from day one.
+            </p>
+          </div>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-[repeat(auto-fill,minmax(290px,1fr))] gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 items-start">
           {projects.map((p, i) => (
-            <Reveal
-              key={p.name}
-              className="group relative flex flex-col rounded-[22px] border border-white/10 bg-white/[0.05] p-8 shadow-glassDark backdrop-blur-xl backdrop-saturate-[180%] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-white/20 hover:bg-white/[0.09]"
-              delay={i * 0.05}
-            >
-              <div className="mb-3 text-[0.65rem] font-semibold uppercase tracking-[0.08em] text-brandLight">
-                {p.badge}
-              </div>
-              <span className="mb-4 block text-[2rem]">{p.icon}</span>
-              <div className="mb-1 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-white/35">
-                {p.stack}
-              </div>
-              <h3 className="mb-2 text-lg font-semibold tracking-[-0.02em] text-light">
-                {p.name}
-              </h3>
-              <p className="mb-4 text-sm leading-relaxed text-white/50">{p.desc}</p>
-              <div className="mb-3 flex flex-wrap gap-2 text-xs text-white/60">
-                {p.meta.map((m) => (
-                  <span key={m} className="rounded-full bg-white/5 px-2.5 py-0.5">
-                    {m}
-                  </span>
-                ))}
-              </div>
-              <div className="mb-5 flex flex-wrap gap-1.5">
-                {p.tags.map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-full bg-white/5 px-2 py-0.5 text-xs text-white/60"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-              <a
-                href={p.href}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-auto inline-flex items-center gap-1 text-sm text-brandLight transition-all hover:gap-2"
-              >
-                View on GitHub →
+            <Reveal key={p.name} delay={i * 0.1}>
+              <a href={p.href} target="_blank" rel="noopener noreferrer" className="group relative block">
+                <div className="relative rounded-2xl overflow-hidden transition-all duration-500 bg-white shadow-lg hover:shadow-xl hover:shadow-red-500/10 transform hover:-translate-y-1">
+                  <div className="relative h-48 overflow-hidden flex items-center justify-center">
+                    <div className={`absolute inset-0 bg-gradient-to-br opacity-90 ${p.gradient}`} />
+                    <div className="relative z-10 text-7xl transition-transform duration-500 group-hover:scale-110">
+                      {p.emoji}
+                    </div>
+                    <div className="absolute top-4 right-4 z-20 flex gap-2">
+                      <div className="p-2 rounded-full backdrop-blur-md transition-all duration-300 bg-white/70 text-stone-700 group-hover:bg-white group-hover:text-red-600">
+                        <Github className="h-4 w-4" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="mb-3">
+                      <h3 className="text-xl font-medium mb-1 font-serif text-stone-900">{p.name}</h3>
+                      <p className="text-sm font-medium text-red-700">{p.kind}</p>
+                    </div>
+                    <p className="mb-4 text-sm text-stone-600 leading-relaxed">{p.desc}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {p.tags.map((t) => (
+                        <span
+                          key={t}
+                          className="px-3 py-1 rounded-full text-xs font-medium bg-stone-100 text-stone-700"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </a>
             </Reveal>
           ))}
         </div>
       </div>
+
+      {/* Background blobs */}
+      <div className="absolute -left-40 top-1/4 w-96 h-96 bg-gradient-to-br rounded-full blur-3xl -z-10 opacity-20 from-red-500/10 to-orange-500/10" />
+      <div className="absolute -right-40 bottom-1/4 w-96 h-96 bg-gradient-to-tl rounded-full blur-3xl -z-10 opacity-15 from-purple-500/10 to-pink-500/10" />
     </section>
+  );
+}
+
+function Github({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+      <path d="M9 18c-4.51 2-5-2-7-2" />
+    </svg>
   );
 }
