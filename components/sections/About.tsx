@@ -46,7 +46,7 @@ export function About() {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="text-lg leading-relaxed mb-8 text-stone-600">
-                ISTQB certified. F-1 OPT with STEM extension, no sponsorship required. Available
+                ISTQB certified. Work-authorized with no sponsorship required. Available
                 immediately for Senior SDET, SDE II Automation, QE, or QA Lead roles — hybrid,
                 remote, or on-site across the US.
               </p>

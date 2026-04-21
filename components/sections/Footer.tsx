@@ -13,13 +13,6 @@ export function Footer() {
           </p>
           <div className="flex justify-center gap-4 mb-8">
             <a
-              href="mailto:dhanya.sridhar@example.com"
-              className="p-3 rounded-full transition-all duration-300 bg-stone-100 text-stone-600 hover:bg-stone-200 hover:text-red-600"
-              aria-label="Email"
-            >
-              <Mail className="h-5 w-5" />
-            </a>
-            <a
               href="https://github.com/dhavig"
               target="_blank"
               rel="noopener noreferrer"
@@ -78,15 +71,6 @@ function Coffee({ className }: { className?: string }) {
       <path d="M14 2v2" />
       <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" />
       <path d="M6 2v2" />
-    </svg>
-  );
-}
-
-function Mail({ className }: { className?: string }) {
-  return (
-    <svg {...baseProps(className)}>
-      <rect width="20" height="16" x="2" y="4" rx="2" />
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
     </svg>
   );
 }

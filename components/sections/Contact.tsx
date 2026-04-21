@@ -12,7 +12,7 @@ export function Contact() {
             </h2>
             <p className="text-xl max-w-2xl mx-auto text-stone-600">
               Actively seeking Senior SDET roles. Based in Chicago — available for hybrid, remote,
-              or on-site across the US. F-1 OPT with STEM extension, no sponsorship required.
+              or on-site across the US. Work-authorized, no sponsorship required.
             </p>
           </div>
         </Reveal>
@@ -24,10 +24,10 @@ export function Contact() {
               Available Immediately
             </span>
             <span className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 text-sm text-stone-600">
-              F-1 OPT · No Sponsorship
+              No Sponsorship Required
             </span>
             <span className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 text-sm text-stone-600">
-              STEM Extension ~2029
+              Chicago, IL
             </span>
           </div>
         </Reveal>
@@ -59,13 +59,6 @@ export function Contact() {
               >
                 <Github className="h-4 w-4" />
                 <span>GitHub</span>
-              </a>
-              <a
-                href="tel:+12627559206"
-                className="group flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 w-full sm:w-auto justify-center bg-stone-200 text-stone-700 hover:bg-stone-300 hover:text-red-600"
-              >
-                <Phone className="h-4 w-4" />
-                <span>262-755-9206</span>
               </a>
             </div>
           </div>
@@ -107,10 +100,3 @@ function Github({ className }: { className?: string }) {
   );
 }
 
-function Phone({ className }: { className?: string }) {
-  return (
-    <svg {...baseProps(className)}>
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-    </svg>
-  );
-}
