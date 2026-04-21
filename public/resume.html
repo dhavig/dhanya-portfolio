@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dhanya Sridhar — Resume</title>
+    <style>
+      :root {
+        --ink: #1a1a1a;
+        --muted: #444;
+        --rule: #111;
+        --page-bg: #f5f1ea;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--page-bg);
+        color: var(--ink);
+        font-family: "Latin Modern Roman", "CMU Serif", "Computer Modern", Georgia, "Times New Roman", Times, serif;
+        font-size: 10.5pt;
+        line-height: 1.35;
+      }
+      .page {
+        max-width: 8.5in;
+        margin: 0.5in auto;
+        background: #fefcf7;
+        padding: 0.55in 0.65in 0.45in;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      }
+      .name {
+        text-align: center;
+        font-size: 22pt;
+        font-variant: small-caps;
+        letter-spacing: 0.04em;
+        font-weight: 600;
+        margin: 0 0 2pt;
+      }
+      .title {
+        text-align: center;
+        font-size: 11pt;
+        font-style: italic;
+        color: var(--muted);
+        margin: 0 0 6pt;
+      }
+      .contact {
+        text-align: center;
+        margin-bottom: 10pt;
+        font-size: 10.5pt;
+      }
+      .summary {
+        font-size: 10.5pt;
+        margin: 4pt 0 0;
+      }
+      .contact a {
+        color: var(--ink);
+        text-decoration: underline;
+      }
+      .contact .sep {
+        margin: 0 6pt;
+      }
+      h2.section {
+        font-variant: small-caps;
+        font-weight: 600;
+        font-size: 12pt;
+        letter-spacing: 0.05em;
+        margin: 14pt 0 2pt;
+        padding-bottom: 1pt;
+        border-bottom: 0.6pt solid var(--rule);
+      }
+      .entry {
+        margin: 7pt 0 3pt;
+      }
+      .entry-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12pt;
+      }
+      .entry-row .left { font-weight: 700; }
+      .entry-row .right { font-style: italic; white-space: nowrap; }
+      .entry-sub {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12pt;
+        font-style: italic;
+        margin-top: 1pt;
+      }
+      .coursework { margin-top: 1pt; }
+      .coursework b { font-weight: 700; font-style: normal; }
+      ul.bullets {
+        margin: 3pt 0 0 18pt;
+        padding: 0;
+      }
+      ul.bullets li {
+        margin: 1.5pt 0;
+      }
+      .proj-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 12pt;
+        align-items: baseline;
+      }
+      .proj-header .stack { font-weight: 400; }
+      .proj-header .right { font-style: italic; white-space: nowrap; }
+      .skills-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 4pt;
+      }
+      .skills-table td {
+        padding: 1.5pt 0;
+        vertical-align: top;
+      }
+      .skills-table td:first-child {
+        font-weight: 700;
+        width: 90pt;
+        padding-right: 10pt;
+      }
+      b { font-weight: 700; }
+
+      /* print */
+      @media print {
+        @page { size: letter; margin: 0.45in; }
+        html, body { background: #fff; }
+        .page { margin: 0; box-shadow: none; padding: 0; max-width: none; background: #fff; }
+        .no-print { display: none !important; }
+      }
+
+      .toolbar {
+        position: fixed;
+        top: 14px;
+        right: 16px;
+        display: flex;
+        gap: 8px;
+        z-index: 10;
+      }
+      .toolbar button {
+        font: inherit;
+        font-size: 11pt;
+        padding: 6px 14px;
+        border: 1px solid #b91c1c;
+        background: #b91c1c;
+        color: #fff;
+        border-radius: 999px;
+        cursor: pointer;
+      }
+      .toolbar button.secondary {
+        background: #fff;
+        color: #b91c1c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar no-print">
+      <button onclick="window.print()">Save as PDF</button>
+      <button class="secondary" onclick="window.close()">Close</button>
+    </div>
+
+    <div class="page">
+      <h1 class="name">Dhanya Sridhar</h1>
+      <div class="title">AI Quality Engineer &middot; Senior SDET</div>
+      <div class="contact">
+        <a href="mailto:dhanya.sridhar02@gmail.com">dhanya.sridhar02@gmail.com</a>
+        <span class="sep">|</span>
+        <a href="https://linkedin.com/in/dhanyasridhar02">linkedin.com/in/dhanyasridhar02</a>
+        <span class="sep">|</span>
+        <a href="https://dhavig.github.io/dhanya-portfolio">dhavig.github.io/dhanya-portfolio</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/dhavig">github.com/dhavig</a>
+      </div>
+
+      <h2 class="section">Summary</h2>
+      <p class="summary">
+        AI Quality Engineer building reliability harnesses for agentic <b>LLM</b> systems — provider-agnostic adapters,
+        <b>LLM-as-judge</b> graders, YAML-driven tool-use / RAG / red-team suites, and <b>DuckDB</b>-backed drift detection.
+        Backed by 5+ years as a Senior SDET shipping <b>Playwright</b>, <b>Selenium</b>, and <b>REST Assured</b> automation
+        across fintech and healthcare. ISTQB certified. MS Computer Science, Loyola University Chicago (Cum Laude, 2026).
+      </p>
+
+      <h2 class="section">Education</h2>
+      <div class="entry">
+        <div class="entry-row">
+          <span class="left">Loyola University Chicago</span>
+          <span class="right">August 2024 – May 2026</span>
+        </div>
+        <div class="entry-sub">
+          <span>Master of Science in Computer Science</span>
+          <span>GPA: 3.67 · Cum Laude</span>
+        </div>
+        <div class="coursework">
+          <b>Relevant Coursework:</b> Algorithms, Distributed Systems, Machine Learning, Software Engineering, Cloud Computing
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-row">
+          <span class="left">Anna University</span>
+          <span class="right">2015 – 2019</span>
+        </div>
+        <div class="entry-sub">
+          <span>Bachelor of Engineering in Computer Science</span>
+          <span>Tamil Nadu, India</span>
+        </div>
+      </div>
+
+      <h2 class="section">Experience</h2>
+
+      <div class="entry">
+        <div class="entry-row">
+          <span class="left">SDET Intern</span>
+          <span class="right">May 2025 – November 2025</span>
+        </div>
+        <div class="entry-sub">
+          <span>CCC Intelligent Solutions</span>
+          <span>Chicago, IL</span>
+        </div>
+        <ul class="bullets">
+          <li>Architected a <b>Playwright + TypeScript</b> end-to-end automation framework from scratch, reducing regression cycle time by <b>40%</b></li>
+          <li>Built multi-stage <b>GitHub Actions CI/CD</b> pipelines triggering suites on every PR, enabling continuous quality gates</li>
+          <li>Validated <b>DB2</b> financial data integrity across payment processing workflows with <b>99.9%</b> accuracy at production scale</li>
+          <li>Integrated <b>GitHub Copilot</b> for AI-assisted test generation, improving coverage by <b>30%</b></li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-row">
+          <span class="left">Senior SDET</span>
+          <span class="right">June 2023 – August 2024</span>
+        </div>
+        <div class="entry-sub">
+          <span>Tata Consultancy Services — Client: MetLife</span>
+          <span>Chicago, IL</span>
+        </div>
+        <ul class="bullets">
+          <li>Led API automation strategy using <b>REST Assured</b>, achieving <b>90%+</b> coverage across <b>15+</b> microservices in production</li>
+          <li>Designed <b>JMeter</b> performance suites validating platform stability under <b>10,000+</b> concurrent users with zero critical load failures</li>
+          <li>Built reusable <b>Cucumber/BDD</b> framework components, reducing test authoring time by <b>35%</b> across 3 engineering squads</li>
+          <li>Mentored 3 junior SDETs on framework best practices, BDD authoring, and CI/CD integration</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-row">
+          <span class="left">SDET</span>
+          <span class="right">August 2021 – May 2023</span>
+        </div>
+        <div class="entry-sub">
+          <span>Cognizant — Clients: Humana &amp; CarePlus</span>
+          <span>Remote, US</span>
+        </div>
+        <ul class="bullets">
+          <li>Built and maintained <b>200+</b> automated test cases using <b>Selenium WebDriver</b> and <b>TestNG</b></li>
+          <li>Designed <b>Cucumber/Gherkin</b> BDD framework reducing scenario authoring time by <b>35%</b></li>
+          <li>Led <b>HIPAA</b>-regulated healthcare data compliance validation across benefits, claims, and member eligibility flows</li>
+          <li>Awarded <b>Humana Exceptional Mover</b> and <b>Upcoming Star</b> — 2022</li>
+        </ul>
+      </div>
+
+      <h2 class="section">Projects</h2>
+
+      <div class="entry">
+        <div class="proj-header">
+          <span><b>AgentEvalHub</b> <span class="stack">| Python, Pytest, DuckDB, Streamlit, LLM-as-Judge, GitHub Actions</span></span>
+          <span class="right">2025 – Present</span>
+        </div>
+        <ul class="bullets">
+          <li>Open-source reliability harness for agentic <b>LLM</b> systems; provider-agnostic adapters for Claude, OpenAI, Gemini, and Ollama</li>
+          <li>YAML-driven tool-use / RAG / red-team suites with deterministic and <b>LLM-as-judge</b> graders</li>
+          <li><b>DuckDB</b> run history with SQL-based drift detection, Streamlit dashboard, and weekly GitHub Action that auto-opens issues on model regressions</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="proj-header">
+          <span><b>SDET Automation Framework</b> <span class="stack">| Playwright, TypeScript, Docker, AWS S3, GitHub Actions</span></span>
+          <span class="right">2024</span>
+        </div>
+        <ul class="bullets">
+          <li>Enterprise-grade test automation framework with parallel execution, REST API testing, and container-based CI/CD</li>
+          <li>Integrated <b>AWS S3</b> test reporting with Allure dashboards for cross-team visibility</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="proj-header">
+          <span><b>SauceDemo E2E Suite</b> <span class="stack">| Java, Selenium, TestNG, Maven, Page Object Model</span></span>
+          <span class="right">2023</span>
+        </div>
+        <ul class="bullets">
+          <li>Production-quality end-to-end suite using <b>POM</b>; covered full checkout flow with cross-browser execution</li>
+          <li>Data-driven <b>Apache POI</b> Excel testing with Jenkins CI pipeline integration</li>
+        </ul>
+      </div>
+
+      <h2 class="section">Skills</h2>
+      <table class="skills-table">
+        <tr>
+          <td>AI &amp; LLM</td>
+          <td>LLM-as-judge evaluation, Agent red-teaming, Tool-use &amp; RAG eval suites, Prompt-injection testing, Model drift detection, DuckDB, Streamlit, Claude / OpenAI / Gemini / Ollama</td>
+        </tr>
+        <tr>
+          <td>Test Automation</td>
+          <td>Playwright, Selenium, REST Assured, Pytest, Cucumber, TestNG, JUnit, JMeter, Apache POI</td>
+        </tr>
+        <tr>
+          <td>Languages</td>
+          <td>Python, TypeScript, Java, SQL</td>
+        </tr>
+        <tr>
+          <td>Tools &amp; CI/CD</td>
+          <td>Git/GitHub, GitHub Actions, Jenkins, Docker, AWS S3, Postman, Allure, Jira</td>
+        </tr>
+      </table>
+
+      <h2 class="section">Certifications &amp; Recognition</h2>
+      <ul class="bullets">
+        <li><b>ISTQB Foundation Level</b> — International Software Testing Qualifications Board · Score 83% · 2024</li>
+        <li><b>SCLA Honor Society</b> — Nominated by faculty at Loyola University Chicago · Nationally accredited · 2026</li>
+        <li><b>Exceptional Mover Award</b> &amp; <b>Upcoming Star Award</b> — Humana / Cognizant · 2022</li>
+        <li><b>AWS Developer Associate</b> — In active preparation · Expected 2026</li>
+      </ul>
+    </div>
+  </body>
+</html>

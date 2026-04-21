@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:resume": "node scripts/build-resume.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.18.2",

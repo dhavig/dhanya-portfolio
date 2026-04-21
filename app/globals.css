@@ -11,7 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle noise texture overlay (Kaitlin-style) */
+/* Subtle noise texture overlay */
 .noise-texture {
   position: relative;
 }
@@ -24,6 +24,10 @@ body {
   opacity: 0.5;
   pointer-events: none;
   z-index: 1;
+}
+
+.dark .noise-texture::before {
+  opacity: 0.3;
 }
 
 /* Reduced motion */
