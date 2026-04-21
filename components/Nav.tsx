@@ -9,6 +9,8 @@ const links = [
   { href: '#contact', label: 'contact' },
 ];
 
+const resumeHref = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/Dhanya_Sridhar_Resume.pdf`;
+
 export function Nav() {
   const [active, setActive] = useState('#about');
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -82,7 +84,7 @@ export function Nav() {
                 <span>Playground</span>
               </a>
               <a
-                href="/Dhanya_Sridhar_Resume.pdf"
+                href={resumeHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 download="Dhanya_Sridhar_Resume.pdf"
@@ -144,7 +146,7 @@ export function Nav() {
               </a>
             ))}
             <a
-              href="/Dhanya_Sridhar_Resume.pdf"
+              href={resumeHref}
               target="_blank"
               rel="noopener noreferrer"
               download="Dhanya_Sridhar_Resume.pdf"
