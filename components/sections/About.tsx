@@ -3,14 +3,14 @@ import { Reveal } from '@/components/Reveal';
 const drivers = [
   'Building Playwright & REST Assured frameworks that cut regression time by 40%',
   'Validating HIPAA-regulated healthcare data and fintech payment integrity',
-  'Mentoring junior SDETs on BDD, POM, and CI/CD best practices',
-  'Shipping quality that product and engineering teams actually rely on',
+  'Probing AI agents for drift, prompt injection, and silent model regressions',
+  'Mentoring junior SDETs on BDD, POM, CI/CD, and LLM-as-judge patterns',
 ];
 
 const skills = [
   'Playwright', 'Selenium', 'REST Assured', 'Cucumber', 'TestNG', 'JUnit', 'Java',
-  'TypeScript', 'Python', 'SQL', 'Jenkins', 'GitHub Actions', 'Docker', 'JMeter',
-  'AWS S3',
+  'TypeScript', 'Python', 'Pytest', 'SQL', 'DuckDB', 'Jenkins', 'GitHub Actions',
+  'Docker', 'JMeter', 'AWS S3', 'LLM-as-Judge', 'Streamlit',
 ];
 
 export function About() {
@@ -32,8 +32,18 @@ export function About() {
               <p className="text-lg leading-relaxed mb-6 text-stone-600">
                 Hi, I&apos;m Dhanya — a Senior SDET with 5+ years across fintech and healthcare.
                 I build Playwright, Selenium, and REST Assured frameworks that engineering teams
-                rely on daily, and I care deeply about reliability, accessibility, and the quiet
-                craftsmanship that separates a good test from a great one.
+                rely on daily — and increasingly, reliability harnesses for agentic LLM systems
+                (see{' '}
+                <a
+                  href="https://github.com/dhavig/agent-eval-hub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-red-700 underline decoration-red-300 underline-offset-4 hover:decoration-red-500"
+                >
+                  AgentEvalHub
+                </a>
+                ). I care deeply about reliability and the quiet craftsmanship that separates a
+                good test from a great one.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
